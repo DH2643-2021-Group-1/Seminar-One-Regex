@@ -17,8 +17,8 @@ export const InputForm = (props: Props) => {
 
   const simpleRegex = /\S+@\S+\.\S+/;
   // \S 👉 Not whitespace. Matches any char that is not a whitespace character
-  // + 👉 Quantifier. Match 1 or more occurences of the preceding token.
-  // @ 👉 Matches a "@" character
+  // +  👉 Quantifier. Match 1 or more occurences of the preceding token.
+  // @  👉 Matches a "@" character
   // \. 👉 Escaped character. Matches a "." character
 
   const saferRegex =
@@ -29,7 +29,7 @@ export const InputForm = (props: Props) => {
       <TextField
         required
         id="outlined-basic"
-        label="Outlined"
+        label="E-mail address"
         variant="outlined"
         value={textValue}
         onChange={onTextChange}
