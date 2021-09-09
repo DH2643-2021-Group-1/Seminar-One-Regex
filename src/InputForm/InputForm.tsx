@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Button } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 
 interface Props {}
 
@@ -10,8 +10,8 @@ export const InputForm = (props: Props) => {
   const onTextChange = (e: any) => {
     const email = e.target.value;
     setTextValue(email);
-    //const isOK = simpleRegex.test(email);
-    const isOK = saferRegex.test(email);
+    const isOK = simpleRegex.test(email);
+    //const isOK = saferRegex.test(email);
     isOK ? setIsValid(true) : setIsValid(false);
   };
 
@@ -27,7 +27,6 @@ export const InputForm = (props: Props) => {
   return (
     <form noValidate autoComplete="off">
       <TextField
-        required
         id="outlined-basic"
         label="E-mail address"
         variant="outlined"
